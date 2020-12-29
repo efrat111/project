@@ -1,0 +1,112 @@
+﻿<Window x:Class="tastyProject.Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tastyProject"
+        mc:Ignorable="d"
+        Title="Search" 
+        Height="1800" Width="1917.647" WindowState="Maximized" ResizeMode="CanResize">
+    <DockPanel>
+        <Menu  DockPanel.ZIndex="0" DockPanel.Dock="Top" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="732">
+            <Image MouseEnter="button1_MouseEnter" x:Name="img" AllowDrop="True" Panel.ZIndex="0" Source="/images/search/trashCan.jpg" Width="44" />
+            <Button Content="עגלה" DockPanel.ZIndex="0" Height="23" HorizontalAlignment="Left"
+
+                    x:Name="basket" VerticalAlignment="Top"
+
+                    Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+                    MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" RenderTransformOrigin="0.811,-2.252" />
+            <Button Content="Button" Height="23" HorizontalAlignment="Left"
+
+                    x:Name="button1_Copy3" VerticalAlignment="Top"
+
+                    Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                    MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" />
+            <Button Panel.ZIndex="2" Content="Button" Height="23" HorizontalAlignment="Left"
+
+                    x:Name="button1_Copy4" VerticalAlignment="Top"
+
+                    Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                    MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" />
+            <Button Content="Button" Height="23" HorizontalAlignment="Left"
+
+                    x:Name="button1_Copy6" VerticalAlignment="Top"
+
+                    Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                    MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" />
+        </Menu>
+        <ScrollViewer DockPanel.ZIndex="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MinWidth="20">
+            <Grid AllowDrop="True" x:Name="mainGrd">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                    <RowDefinition MinHeight="100" Height="100*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="בשרים ועופות" Margin="684,10,0,0" Grid.Row="0" VerticalAlignment="Top" Height="29" Width="98" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="דגים"  Margin="684,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="98" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="ירקות" Margin="684,0,0,0" Grid.Row="2" VerticalAlignment="Top" Height="29" Width="98" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="מוצרי אפייה" Margin="684,0,0,0" Grid.Row="3" VerticalAlignment="Top" Height="29" Width="98" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="מוצרי בישול" Margin="694,0,0,0" Grid.Row="4" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="מוצרי חלב" Margin="694,0,0,0" Grid.Row="5" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="מוצרי יסוד" Margin="694,0,-1,0" Grid.Row="6" VerticalAlignment="Top" Height="29" Width="99" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="פירות" Margin="694,10,0,0" Grid.Row="9" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="פיצוחים" Margin="694,0,0,0" Grid.Row="8" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="עשבי תיבול" Margin="695,0,-1,0" Grid.Row="7" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="פסטות" Margin="684,10,0,0" Grid.Row="10" VerticalAlignment="Top" Height="28" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="קטניות" Margin="644,23,0,0" Grid.Row="11" VerticalAlignment="Top" Height="29" Width="98" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="שימורים" Margin="633,39,0,0" Grid.Row="13" VerticalAlignment="Top" Height="29" Width="99" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Label Content="רטבים ותבלינים" Margin="633,29,0,0" Grid.Row="12" VerticalAlignment="Top" Height="29" Width="99" RenderTransformOrigin="0.508,5.361" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+                <Grid Panel.ZIndex="1"  Height="75" HorizontalAlignment="Left" AllowDrop="True"
+
+      Margin="21,22,0,0" Name="grid1" VerticalAlignment="Top"
+
+       Width="658" ShowGridLines="True">
+                    <Button Content="Button" Panel.ZIndex="3" Height="23" HorizontalAlignment="Left"
+
+                Margin="480,10,0,0" x:Name="button2" VerticalAlignment="Top"
+
+                Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" RenderTransformOrigin="0.811,-2.252" />
+                    <Button Content="Button" Height="23" HorizontalAlignment="Left"
+
+                Margin="573,38,0,0" Panel.ZIndex="3" x:Name="button3" VerticalAlignment="Top"
+
+                Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" />
+                    <Button Content="Button" Height="23" HorizontalAlignment="Left"
+
+                Margin="480,38,0,0" Panel.ZIndex="4" x:Name="button4" VerticalAlignment="Top"
+
+                Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" />
+                    <Button Content="Button" DockPanel.ZIndex="4" Height="23" HorizontalAlignment="Left"
+
+                    Margin="573,10,0,0" x:Name="button1" VerticalAlignment="Top"
+
+                    Width="75" MouseLeftButtonUp="button1_MouseLeftButtonUp"
+
+                    MouseMove="button1_MouseMove" MouseUp="button1_MouseUp" RenderTransformOrigin="0.811,-2.252" />
+                </Grid>
+
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

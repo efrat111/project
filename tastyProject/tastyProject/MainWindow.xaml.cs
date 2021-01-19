@@ -42,7 +42,7 @@ namespace tastyProject
             Button b = (Button)sender;
             Data.specificCategoryName = b.Content.ToString();
             BL.recipes = BL.parameterForTable("SP_getRecipesByCategory", BL.getCode("getCategoryCodeByName", Data.specificCategoryName), "@categoryCode");
-            BL.openCategory(this, b.Content.ToString());
+            BL.openCategory(this, Data.specificCategoryName);
             likedRecipeNum.Content = BL.countTable("likedRecipes");
             this.Show();
         }
@@ -50,34 +50,31 @@ namespace tastyProject
         private void ButtonClick_toAllSearches(object sender, RoutedEventArgs e)
         {
             Data.specificRecipeName = textBox1.Text;
-            Data.toAllSearches = true;
+            Data.pageName = "toAllSearchesPage";
             BL.recipes = BL.parameterForTable("SP_getRecipesBySearch", Data.specificRecipeName, "@recipeName");
-            specific_Categories sc = new specific_Categories();
-            this.Hide();
-            sc.ShowDialog();
+            BL.openCategory(this, BL.recipes.Rows.Count+" - כל התוצאות");
             textBox1.Text = "";
             likedRecipeNum.Content = BL.countTable("likedRecipes");
             this.Show();
-            Data.toAllSearches = false;
+            Data.pageName = "";
         }
 
         private void Button_likedRecipes(object sender, RoutedEventArgs e)
         {
-            BL.recipes = BL.getRecipesByUserId("SP_getRecipesByUserID", "likedRecipes");
-            specific_Categories sc = new specific_Categories();
-            this.Hide();
-            sc.ShowDialog();
+            BL.recipes = BL.getTable("SP_getRecipesByUserID", "likedRecipes");
+            Data.pageName = "likedRecipesPage";
+            BL.openCategory(this, "מתכונים שאהבת");
             likedRecipeNum.Content = BL.countTable("likedRecipes");
+            Data.pageName = "";
             this.Show();
         }
 
-        private void Button_lastRecipes(object sender, RoutedEventArgs e)
+        private void Button_lastRecipesEntered(object sender, RoutedEventArgs e)
         {
-            BL.recipes = BL.getRecipesByUserId("SP_getRecipesByUserID", "lastSearches");
-            specific_Categories sc = new specific_Categories();
-            this.Hide();
-            sc.ShowDialog();
-            likedRecipeNum.Content = BL.countTable("likedRecipes");
+            Data.pageName = "lastEnteredRecipesPage";
+            BL.recipes = BL.getTable("SP_getRecipesByUserID", "lastRecipesEntered");
+            BL.openCategory(this, "מתכונים אחרונים שראית");
+            Data.pageName = "";
             this.Show();
         }
 

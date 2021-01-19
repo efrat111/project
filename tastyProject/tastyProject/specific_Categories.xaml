@@ -12,7 +12,7 @@
                 <ImageBrush/>
             </Grid.Background>
 
-            <Label Content="חיפוש" HorizontalAlignment="Left" Margin="714,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.048,0.615" FontFamily="Century Gothic"  />
+            <Label Name="pageName" Content="חיפוש" HorizontalAlignment="Left" Margin="714,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.048,0.615" FontFamily="Century Gothic"  />
             <Label Name="label1" Content="תוצאות החיפוש" HorizontalAlignment="Left" Margin="228,61,0,0" VerticalAlignment="Top" Height="29" Width="148"/>
             <TextBox x:Name="textBox1" HorizontalAlignment="Center"  Height="34" Width="400" MaxHeight="200" MaxWidth="400"  FontSize="24" FontFamily="Comic Sans MS" Margin="117,12,275,373"/>
             <ListBox x:Name="lbSuggestion" HorizontalAlignment="Center" Height="72" Width="400" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed" FontSize="12" SelectionChanged="LB_selecionChanged">
@@ -27,7 +27,6 @@
 
 
             </Grid>
-
         </Grid>
     </ScrollViewer>
 </Window>

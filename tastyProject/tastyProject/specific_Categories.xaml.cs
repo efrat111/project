@@ -22,15 +22,13 @@ namespace tastyProject
         public specific_Categories()
         {
             InitializeComponent();
-            
             BL.getRecipesNames(recipesList);
             textBox1.TextChanged += new TextChangedEventHandler(textBox1_TextChanged);
 
-            if (Data.toAllSearches == false)
-                label1.Content = Data.specificCategoryName;
+            if (Data.pageName == "")
+                pageName.Content = Data.specificCategoryName;
 
-
-            BL.recipesForWindow(label1, grid, textBox1, this);
+            BL.recipesForWindow(label1, grid, this);
 
         }
 
@@ -48,7 +46,7 @@ namespace tastyProject
         {
             Data.specificRecipeName = textBox1.Text;
             BL.recipes = BL.parameterForTable("SP_getRecipesBySearch", Data.specificRecipeName, "@recipeName");
-            BL.recipesForWindow(label1, grid, textBox1, this);
+            BL.recipesForWindow(label1, grid, this);
         }
     }
 }

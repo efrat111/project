@@ -16,8 +16,7 @@ namespace tastyProject
         public static string userId="22122378";
         public static string specificCategoryName="";
         public static string specificRecipeName="";
-        public static bool toAllSearches = false;
-
-       
+        public static string pageName = "";
+        public static Grid grid;
     }
 }

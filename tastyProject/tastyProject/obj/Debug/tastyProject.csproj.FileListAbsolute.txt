@@ -19,3 +19,5 @@ C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\specific_Categories.
 C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\specific_Categories.baml
 C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\specific_Recipe.g.cs
 C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\specific_Recipe.baml
+C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\Search.g.cs
+C:\racheli\tastyProject\tastyProject\tastyProject\obj\Debug\Search.baml

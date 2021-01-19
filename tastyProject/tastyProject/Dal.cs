@@ -67,7 +67,6 @@ namespace tastyProject
             return dt;
         }
 
-
         public static object Scalar(string sp, List<SqlParameter> param)
         {
             object outPut = null;

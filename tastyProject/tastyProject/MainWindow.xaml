@@ -141,7 +141,7 @@
                     </MenuItem>
                 </Menu>
 
-                <Button x:Name="lastSearches" Background="White" Width="55" Height="48">
+                <Button x:Name="lastRecipesEntered" Background="White" Width="55" Height="48" Click="Button_lastRecipesEntered">
                     <Image Source="images\search.png" Stretch="Fill"></Image>
                 </Button>
                 <Button Width="55" Height="48" Click="Button_likedRecipes">
